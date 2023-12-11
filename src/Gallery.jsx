@@ -14,18 +14,20 @@ const Gallery = ({ cities }) => {
 
     return (
         <>
-            <div className='flex justify-center items-center'>What Santa Are You Today?</div>
+            <div className='flex justify-center items-center text-xl font-bold m-4'>
+                What Santa Are You Today?
+            </div>
             <div className="gallery-container flex flex-wrap justify-center">
                 {cities.map((city) => (
                     <div
                         key={city.id}
-                        className="gallery-item w-32 h-32 bg-cover cursor-pointer"
+                        className="gallery-item bg-cover cursor-pointer"
                         onClick={() => handleCityClick(city)}
+
                     //style={{ backgroundImage: `url(${city.image})` }}
                     >
                         <img
-                            className="gallery-item w-32 h-32 bg-cover cursor-pointer"
-
+                            className="gallery-item h-32 bg-cover cursor-pointer"
                             src={`${city.image}`}
                             alt="icon"
                         />
@@ -43,7 +45,7 @@ const Gallery = ({ cities }) => {
                             style={{ backgroundImage: `url(${selectedCity.image})` }}
                         />
                         <img
-
+                            className=" min-w-full"
                             src={`${selectedCity.image}`}
                             alt="icon"
                         />
