@@ -1,5 +1,6 @@
 // Gallery.jsx
 import React, { useState } from 'react';
+import './index.css'
 
 const Gallery = ({ santas }) => {
     const [selectedSanta, setSelectedSanta] = useState(null);
@@ -14,8 +15,14 @@ const Gallery = ({ santas }) => {
 
     return (
         <>
-            <div className='flex justify-center text-white items-center text-xl font-bold m-4'>
-                What Santa Are You Today?
+            <div className='santa-title flex justify-center text-white items-center 
+            text-xl font-bold m-4 mt-9'>
+                Santa Multiverse
+            </div>
+            <div className='santa-title flex  text-white items-center 
+            text-xs font-light ml-3 '
+                style={{ transform: 'rotate(-10deg) translateY(80%)', transformOrigin: 'bottom left' }}>
+                (Tap to zoom)
             </div>
             <div className="gallery-container flex flex-wrap justify-center">
                 {santas.map((santa) => (
@@ -25,7 +32,7 @@ const Gallery = ({ santas }) => {
                         onClick={() => handleSantaClick(santa)}
                     >
                         <img
-                            className="gallery-item h-20 bg-cover cursor-pointer"
+                            className="gallery-item h-24 bg-cover cursor-pointer"
                             src={`${santa.image}`}
                             alt="icon"
                         />
