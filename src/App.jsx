@@ -2,38 +2,54 @@ import React from 'react';
 import './App.css';
 import Gallery from './Gallery';
 
-const cities = [
-  {
-    id: 1,
-    title: 'Santa 1',
-    image: './santa1.png',
-  },
+const santas = [
+
   {
     id: 2,
     title: 'Santa 2',
-    image: './santa2.png',
+    image: './2.png',
   },
   {
     id: 3,
     title: 'Santa 3',
-    image: './santa1.png',
+    image: './3.png',
   },
   {
     id: 4,
     title: 'Santa 4',
-    image: './santa2.png',
+    image: './4.png',
   },
   {
     id: 5,
     title: 'Santa 5',
-    image: './santa1.png',
+    image: './5.png',
+  },
+  {
+    id: 6,
+    title: 'Santa 6',
+    image: './6.png',
+  },
+  {
+    id: 4,
+    title: 'Santa 4',
+    image: './4.png',
+  },
+  {
+    id: 5,
+    title: 'Santa 5',
+    image: './5.png',
+  },
+  {
+    id: 6,
+    title: 'Santa 6',
+    image: './6.png',
   },
 ];
 
 const App = () => {
   return (
     <div className="app">
-      <Gallery cities={cities} />
+      <Gallery santas={santas} />
     </div>
   );
 };
