@@ -21,8 +21,16 @@ const Gallery = ({ cities }) => {
                         key={city.id}
                         className="gallery-item w-32 h-32 bg-cover cursor-pointer"
                         onClick={() => handleCityClick(city)}
-                        style={{ backgroundImage: `url(${city.image})` }}
-                    />
+                    //style={{ backgroundImage: `url(${city.image})` }}
+                    >
+                        <img
+                            className="gallery-item w-32 h-32 bg-cover cursor-pointer"
+
+                            src={`${city.image}`}
+                            alt="icon"
+                        />
+
+                    </div>
                 ))}
 
                 {selectedCity && (
