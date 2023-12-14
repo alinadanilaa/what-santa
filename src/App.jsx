@@ -8,7 +8,7 @@ for (let i = 1; i <= 40; i++) {
   santas.push({
     id: i,
     title: `Santa ${i}`,
-    image: `./public/${i}.png`,
+    image: `./${i}.png`,
   });
 }
 
